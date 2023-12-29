@@ -6,13 +6,13 @@
 
   Виправте тип у аргументі функції так, щоб не було помилок типу.
 */
+
 type User = {
   name: string;
   surname: string;
   email: string;
   password: string;
 };
-
 function createOrUpdateUser(initialValues: Partial<User>): User {
   const updatedUser: User = {
     name: "Lana",
@@ -27,3 +27,26 @@ function createOrUpdateUser(initialValues: Partial<User>): User {
 createOrUpdateUser({ email: "user@mail.com", password: "password123" });
 
 export {};
+
+// type User = {
+//   name: string;
+//   surname: string;
+//   email: string;
+//   password: string;
+// };
+
+// function createOrUpdateUser(user: User, fieldsToUodate: Partial<User>): User {
+//   return { ...user, ...fieldsToUodate };
+// }
+
+// const user1: User = {
+//   name: "Svitlana",
+//   surname: "Bardashova",
+//   email: "svitlana@outlook.es",
+//   password: "1234",
+// };
+
+// const user2 = {
+//   email: "user@mail.com",
+//   password: "password123",
+// };
